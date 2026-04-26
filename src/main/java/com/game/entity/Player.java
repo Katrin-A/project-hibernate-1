@@ -1,7 +1,6 @@
 package com.game.entity;
 
 import jakarta.persistence.*;
-import org.springframework.context.annotation.EnableMBeanExport;
 
 import java.util.Date;
 
@@ -14,6 +13,7 @@ import java.util.Date;
 public class Player {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false)
     private Long id;
 
